@@ -4,6 +4,7 @@
 
     </head>
     <header>
+        <a href="#main">Skip to Main Content</a>
         <h1>Wunderlust Travel</h1>
         <img
         alt=""
@@ -22,12 +23,12 @@
                 <li>Destinations</li>
                 <li>Inspirations</li>
                 <li>Special</li>
-                <li>Contact Us</li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
     <body>
-        <main>
+        <main id="main">
             <h2>Majorca</h2>
             <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</p>
 
@@ -222,19 +223,57 @@
             
                     
                     
-
+            <section id="contact">
             <h2>Contact Us</h2>
                 <form>
-                    First Name (Enter first name)
-                    Last Name (Enter last name)
+                    <label for="first-name">First Name <span class="required">*</span></label>
+                    <input type="text" name="first-name" id="first-name" autocomplete="name" required> 
 
-                    Contact Method (Email, Text, Phone)
-                    Email Address (Enter Email)
-                    Phone Number (Enter telephone number)
+                    <label for="last-name">Last Name <span>*</span></label>
+                    <input type="text" name="last-name" id="last-name" autocomplete="name" required>
 
-                    Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)
-                    Travel Time (Fall, Winter, Spring, Summer, Flexible)
+                    <fieldset>
+                        <legend>Contact Method <span class="required">*</span></legend>
+                        <input type="radio" name="pref-contact" id="pref-email">
+                        <label for="pref-email">Email</label>
+                        <input type="radio" name="pref-contact" id="pref-text">
+                        <label for="pref-text">Text</label>
+                        <input type="radio" name="pref-contact" id="pref-call">
+                        <label for="pref-call">Phone</label>
+                    </fieldset>
+
+                    <label for="my-inbox">Email Address<span class="required">*</span></label>
+                    <input type="email" name="my-inbox" id="my-inbox" autocomplete="email" required>
+
+                    <label for="my-tel">Phone Number<span class="required">*</span></label>
+                    <input type="tel" name="my-tel" id="my-tel" autocomplete="tel" required>
+
+                    <label for="my-destination">Destination<span class="required">*</span></label>
+                    <select  name="my-destination" id="my-destination" required>
+                        <option>Please choose a destination</option>
+                        <option>Barcelona</option>
+                        <option>Granada</option>
+                        <option>Ibiza</option>
+                        <option>Madrid</option>
+                        <option>Majorca</option>
+                        <option>Seville</option>
+                        <option>Tenerife</option>
+                        <option>Valencia</option>
+                    </select>
+
+                    <label for="travel-time">Travel Time<span class="required">*</span></label>
+                    <select  name="travel-time" id="travel-time" required>
+                        <option>Please choose a time</option>
+                        <option>Fall</option>
+                        <option>Winter</option>
+                        <option>Spring</option>
+                        <option>Summer</option>
+                        <option>Flexible</option>
+                    </select>
+
+                    <input type="submit" name="my-submit" id="my-submit" value="Submit form">
                 </form>
+            </section>
         </main>
         <footer>
             <small>Copyright 2021 Wunderlust</small>
