@@ -129,7 +129,6 @@ footer p, footer a{
 }
 /*-----------------------Header-----------------------*/
 header, nav, main, footer{
-    margin: 0 auto;
     align-content: center;
 }
 
@@ -354,6 +353,9 @@ footer{
         padding: 1.75rem 0.5rem;
         font-size: 21px;
     }
+    nav a:hover{
+        background-color: var(--yellow);
+    }
     main{
         margin-top: 2rem;
     }
@@ -401,4 +403,56 @@ footer{
     footer{
         flex-direction: row;
     }
+    }
+
+@media screen and (min-width:900px) {
+        h1{
+            font-size: 60px;
+        }
+        header p{
+            font-size: 25px;
+        }
+        ul{
+            top: -35px;
+            left: 433px;
+        }
+        nav a{
+            padding: 1.25rem 0.25rem;
+            font-size: 18px;
+        }
+        #intro, #plan #testimonials, #about, #contact{
+            padding: 4rem;
+        }
+        #intro{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        #intro p{
+            grid-column: 1 / 2;
+        }
+        #plan div, #testimonials div, #about div{
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(4, 1fr);
+            padding: .75rem 4rem;
+        }
+        #plan a{
+            margin: 0;
+        }
+        form{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        input[type="submit"]{
+            left: 223px;
+            width: 35%;
+        }
+        footer{
+            justify-items: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        footer p{
+            grid-column: 1 / span 2;
+            justify-self: start;
+        }
     }
