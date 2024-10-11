@@ -130,6 +130,7 @@ footer p, footer a{
 /*-----------------------Header-----------------------*/
 header, nav, main, footer{
     align-content: center;
+    width: 450px;
 }
 
 #skip, .sr-only{
@@ -303,6 +304,10 @@ footer{
 }
 /*-----------------------Media Queries-----------------------*/
 @media screen and (min-width:700px){
+    header, nav, main, footer{
+        align-content: center;
+        width: 700px;
+    }
     header{
         display: grid;
         grid-template-columns: 230px 2fr;
@@ -406,6 +411,10 @@ footer{
     }
 
 @media screen and (min-width:900px) {
+        header, nav, main, footer{
+            align-content: center;
+            width: 900px;
+        }
         h1{
             font-size: 60px;
         }
